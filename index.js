@@ -20,10 +20,16 @@ exports.getIncomeStatement = function (args, done) {
   // regardless of source, we want to choose a provider and then dispatch
   // to that provider, perhaps via config file, or switch after a provider
   // faults.
-  exports.getIncomeStatementYahoo(args, done); 
+  exports.getIncomeStatementYahoo(args, done);
 };
 
 exports.getIncomeStatementYahoo = function (args, done) {
+  exports.fetchIncomeStatementYahoo(args, function (err, html) {
+    exports.parseIncomeStatementYahoo(html, done);
+  });
+};
+
+exports.fetchIncomeStatementYahoo = function (args, done) {
 
   var url = 'http://finance.yahoo.com/q/is?s=' + args.symbol;
   if (args.period === 'annual') {
@@ -101,7 +107,7 @@ exports.parseIncomeStatementYahoo = function (html, done) {
           inSection=text;
           return;
         }
-        console.log('-->', text);
+        // console.log('-->', text);
         return;
       }
 
@@ -111,8 +117,6 @@ exports.parseIncomeStatementYahoo = function (html, done) {
         inSection = '';
         return;
       }
-
-      console.log('---->', text);
     },
     // onclosetag: function (tagname){
     //   if (tagname === 'script') {
@@ -120,10 +124,10 @@ exports.parseIncomeStatementYahoo = function (html, done) {
     //   }
     // },
     onend: function () {
-      done(null, true);
+      console.log(util.inspect(report, {depth: null}));
+      done(null, report);
     }
   }, {decodeEntities: true});
   parser.write(html);
   parser.end();
-  console.log(util.inspect(report, {depth: null}));
 };

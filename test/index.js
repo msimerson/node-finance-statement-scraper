@@ -17,9 +17,9 @@ describe('getIojs', function () {
   });
 });
 
-describe('getIncomeStatementYahoo', function () {
+describe('fetchIncomeStatementYahoo', function () {
   it('gets an Income Statement from Yahoo', function (done) {
-    finScraper.getIncomeStatementYahoo({symbol: 'AAPL'}, function (err, html) {
+    finScraper.fetchIncomeStatementYahoo({symbol: 'AAPL'}, function (err, html) {
       assert.ifError(err);
       // console.log(util.inspect(html, {depth: null}));
       assert.ok(html);
@@ -34,7 +34,7 @@ describe('getIncomeStatementYahoo', function () {
   });
 });
 
-describe.only('parseIncomeStatementYahoo', function () {
+describe('parseIncomeStatementYahoo', function () {
   it('parses a Yahoo Income Statement from raw HTML', function (done) {
     fs.readFile('test/fixtures/AAPL-Yahoo-IS.html', function (err, data) {
       assert.ifError(err);
@@ -48,6 +48,16 @@ describe.only('parseIncomeStatementYahoo', function () {
         // .$('.yfnc_tabledata1')
         done();
       });
+    });
+  });
+});
+
+describe.only('getIncomeStatementYahoo', function () {
+  it('fetches and parses a Yahoo Income Statement', function (done) {
+    finScraper.getIncomeStatementYahoo({symbol: 'AAPL'}, function (err, report) {
+      assert.ifError(err);
+      assert.ok(report['Total Revenue'][0]);
+      done();
     });
   });
 });
