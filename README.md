@@ -20,7 +20,7 @@ Includes a built-in throttle that limits requests to providers, to reduce the li
 
 ## Income Statement
 
-```json
+```js
 { 'Period Ending': [ 'Dec 31, 2014', 'Dec 31, 2013', 'Dec 31, 2012' ],
   'Total Revenue': [ '3,198,356', '2,013,496', '413,256' ],
   'Cost of Revenue': [ '2,316,685', '1,557,234', '383,189' ],
@@ -50,7 +50,7 @@ Includes a built-in throttle that limits requests to providers, to reduce the li
 
 ## Balance Sheet
 
-```json
+```js
 { 'Period Ending': [ 'Dec 31, 2014', 'Dec 31, 2013', 'Dec 31, 2012' ],
   'Cash And Cash Equivalents': [ '1,923,660', '848,901', '220,984' ],
   'Short Term Investments': [ '-', '-', '-' ],
@@ -91,7 +91,7 @@ Includes a built-in throttle that limits requests to providers, to reduce the li
 
 ## Cash Flow
 
-```json
+```js
 { 'Period Ending': [ 'Dec 31, 2014', 'Dec 31, 2013', 'Dec 31, 2012' ],
   'Net Income': [ '(294,040)', '(74,014)', '(396,213)' ],
   Depreciation: [ '301,665', '120,784', '28,825' ],
