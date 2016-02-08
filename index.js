@@ -25,13 +25,9 @@ exports.getIncomeStatement = function (args, done) {
 };
 
 exports.getBalanceSheet = function (args, done) {
-  // choose a provider, dispatch to provider
-  // via config file, or switch after a provider faults?
   yahoo.getBalanceSheet(args, done);
 };
 
-exports.getProfitLoss = function (args, done) {
-  // choose a provider, dispatch to provider
-  // via config file, or switch after a provider faults?
-  yahoo.getProfitLoss(args, done);
+exports.getCashFlow = function (args, done) {
+  yahoo.getCashFlow(args, done);
 };
