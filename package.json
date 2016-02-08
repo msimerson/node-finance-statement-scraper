@@ -1,0 +1,43 @@
+{
+  "name": "finance-statement-scraper",
+  "version": "0.1.0",
+  "description": "Scrape Financial Statements (BS, P&L, Cash Flow)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/msimerson/node-finance-statement-scraper.git"
+  },
+  "keywords": [
+    "finance",
+    "scrape",
+    "balance",
+    "sheet",
+    "profit",
+    "&",
+    "loss",
+    "cash",
+    "flow"
+  ],
+  "author": "Matt Simerson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msimerson/node-finance-statement-scraper/issues"
+  },
+  "homepage": "https://github.com/msimerson/node-finance-statement-scraper#readme",
+  "dependencies": {
+    "htmlparser2": "^3.9.0",
+    "jsdom": "^8.0.1"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-eslint": "*",
+    "grunt-mocha-test": "*",
+    "grunt-version-check": "*",
+    "mocha": "*"
+  }
+}
