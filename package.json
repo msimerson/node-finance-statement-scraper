@@ -1,6 +1,6 @@
 {
   "name": "finance-statement-scraper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scrape Financial Statements (BS, P&L, Cash Flow)",
   "main": "index.js",
   "scripts": {
