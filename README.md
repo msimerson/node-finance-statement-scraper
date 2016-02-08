@@ -11,9 +11,9 @@ Includes a built-in throttle that limits requests to providers, to reduce the li
 # Planned features
 
 * support for additional providers
-    * [Edgar]()
-    * [Daily Finance]()
-    * [Google]()
+    * [Edgar](https://www.sec.gov/edgar/searchedgar/webusers.htm)
+    * [Daily Finance](http://www.dailyfinance.com)
+    * [Google](https://www.google.com/finance)
 * an abstraction layer, that reduces differences between providers
 
 # Example results
