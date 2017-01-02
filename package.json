@@ -29,7 +29,7 @@
   "homepage": "https://github.com/msimerson/node-finance-statement-scraper#readme",
   "dependencies": {
     "htmlparser2": "^3.9.0",
-    "jsdom": "^8.0.1"
+    "jsdom": "^9.9.1"
   },
   "devDependencies": {
     "eslint": "*",
