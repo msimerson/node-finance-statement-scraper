@@ -7,7 +7,7 @@ var util   = require('util');
 var finScraper = require('../index');
 var testCase = { symbol: 'TSLA', period: 'annual' };
 
-describe('getIojs', function () {
+describe.only('getIojs', function () {
   it('counts io.js releases', function (done) {
     finScraper.getIojs(function (err, count) {
       console.log('there have been', count, 'io.js releases.');

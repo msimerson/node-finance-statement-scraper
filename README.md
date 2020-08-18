@@ -5,18 +5,16 @@
 
 Scrape Financial Statements (Balance Sheet, Profit & Loss, Cash Flow) from online providers.
 
-Includes a built-in throttle that limits requests to providers, to reduce the likelihood of getting blacklisted. Be a thoughtful netizen!
+Includes a built-in throttle that limits requests to providers, to reduce the likelihood of getting blacklisted. Please be considerate.
 
 # Current Providers
 
-* Yahoo Finance
-* MSN
+* Yahoo
 
 # Planned features
 
 * support for additional providers
     * [Edgar](https://www.sec.gov/edgar/searchedgar/webusers.htm)
-    * [Daily Finance](http://www.dailyfinance.com)
     * [Google](https://www.google.com/finance)
 * an abstraction layer, that reduces differences between providers
 
