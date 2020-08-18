@@ -13,10 +13,10 @@ describe('getIojs', function () {
       console.log('there have been', count, 'io.js releases.');
       assert.ifError(err);
       assert.ok(count);
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
 
 describe('getIncomeStatement', function () {
   it('dispatches to a provider', function (done) {
@@ -24,10 +24,10 @@ describe('getIncomeStatement', function () {
       assert.ifError(err);
       assert.ok(report['Total Revenue'][0]);
       console.log(util.inspect(report, {depth: null}));
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
 
 describe('getBalanceSheet', function () {
   it('dispatches to a provider', function (done) {
@@ -35,10 +35,10 @@ describe('getBalanceSheet', function () {
       assert.ifError(err);
       assert.ok(report['Total Assets'][0]);
       console.log(util.inspect(report, {depth: null}));
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
 
 describe('getCashFlow', function () {
   it('dispatches to a provider', function (done) {
@@ -46,7 +46,7 @@ describe('getCashFlow', function () {
       assert.ifError(err);
       assert.ok(report['Depreciation'][0]);
       console.log(util.inspect(report, {depth: null}));
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
