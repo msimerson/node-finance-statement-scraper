@@ -1,10 +1,11 @@
 {
   "name": "finance-statement-scraper",
-  "version": "0.2.0",
-  "description": "Scrape Financial Statements (BS, P&L, Cash Flow)",
+  "version": "0.4.0",
+  "description": "Scrape Financial Statements (Balance Sheet, Profit & Loss, Cash Flow)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npx mocha",
+    "versions": "npx dependency-version-checker check"
   },
   "repository": {
     "type": "git",
@@ -13,31 +14,22 @@
   "keywords": [
     "finance",
     "scrape",
-    "balance",
-    "sheet",
-    "profit",
-    "&",
-    "loss",
-    "cash",
-    "flow"
+    "balance sheet",
+    "profit & loss",
+    "cash flow"
   ],
   "author": "Matt Simerson",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/msimerson/node-finance-statement-scraper/issues"
   },
-  "homepage": "https://github.com/msimerson/node-finance-statement-scraper#readme",
+  "homepage": "https://github.com/msimerson/node-finance-statement-scraper",
   "dependencies": {
-    "htmlparser2": "^3.9.0",
-    "jsdom": "^11.0.0"
+    "crawler": "^1.5.0",
+    "htmlparser2": "^4.1.0"
   },
   "devDependencies": {
-    "eslint": "*",
-    "grunt": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-eslint": "*",
-    "grunt-mocha-test": "*",
-    "grunt-version-check": "*",
-    "mocha": "*"
+    "eslint": "^8.56.0",
+    "mocha": "^10.2.0"
   }
 }

@@ -1,19 +1,23 @@
 [![Build Status](https://travis-ci.org/msimerson/node-finance-statement-scraper.svg?branch=master)](https://travis-ci.org/msimerson/node-finance-statement-scraper)
-[![codecov.io](https://codecov.io/github/msimerson/node-finance-statement-scraper/coverage.svg?branch=master)](https://codecov.io/github/msimerson/node-finance-statement-scraper?branch=master)
 
 
 # node-finance-statement-scraper
 
 Scrape Financial Statements (Balance Sheet, Profit & Loss, Cash Flow) from online providers.
 
-Includes a built-in throttle that limits requests to providers, to reduce the likelihood of getting blacklisted. Be a thoughtful netizen!
+Includes a built-in throttle that limits requests to providers, to reduce the likelihood of getting blacklisted. Please be considerate.
+
+# Current Providers
+
+* Yahoo
+* Investigate: https://github.com/pilwon/node-yahoo-finance
+
 
 # Planned features
 
 * support for additional providers
     * [Edgar](https://www.sec.gov/edgar/searchedgar/webusers.htm)
-    * [Daily Finance](http://www.dailyfinance.com)
-    * [Google](https://www.google.com/finance)
+    * [Google](https://www.google.com/finance), maybe with [google-finance-provider](https://github.com/pilwon/node-google-finance)
 * an abstraction layer, that reduces differences between providers
 
 # Example results

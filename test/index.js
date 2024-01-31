@@ -13,40 +13,43 @@ describe('getIojs', function () {
       console.log('there have been', count, 'io.js releases.');
       assert.ifError(err);
       assert.ok(count);
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
 
 describe('getIncomeStatement', function () {
+  this.timeout(3000)
   it('dispatches to a provider', function (done) {
     finScraper.getIncomeStatement(testCase, function (err, report) {
       assert.ifError(err);
       assert.ok(report['Total Revenue'][0]);
       console.log(util.inspect(report, {depth: null}));
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
 
 describe('getBalanceSheet', function () {
+  this.timeout(3000)
   it('dispatches to a provider', function (done) {
     finScraper.getBalanceSheet(testCase, function (err, report) {
       assert.ifError(err);
-      assert.ok(report['Total Assets'][0]);
       console.log(util.inspect(report, {depth: null}));
-      done();
-    });
-  });
-});
+      assert.ok(report['Total Assets'][0]);
+      done()
+    })
+  })
+})
 
 describe('getCashFlow', function () {
+  this.timeout(3000)
   it('dispatches to a provider', function (done) {
     finScraper.getCashFlow(testCase, function (err, report) {
       assert.ifError(err);
       assert.ok(report['Depreciation'][0]);
       console.log(util.inspect(report, {depth: null}));
-      done();
-    });
-  });
-});
+      done()
+    })
+  })
+})
