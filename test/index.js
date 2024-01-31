@@ -7,7 +7,7 @@ var util   = require('util');
 var finScraper = require('../index');
 var testCase = { symbol: 'TSLA', period: 'annual' };
 
-describe.only('getIojs', function () {
+describe('getIojs', function () {
   it('counts io.js releases', function (done) {
     finScraper.getIojs(function (err, count) {
       console.log('there have been', count, 'io.js releases.');
@@ -19,6 +19,7 @@ describe.only('getIojs', function () {
 })
 
 describe('getIncomeStatement', function () {
+  this.timeout(3000)
   it('dispatches to a provider', function (done) {
     finScraper.getIncomeStatement(testCase, function (err, report) {
       assert.ifError(err);
@@ -30,17 +31,19 @@ describe('getIncomeStatement', function () {
 })
 
 describe('getBalanceSheet', function () {
+  this.timeout(3000)
   it('dispatches to a provider', function (done) {
     finScraper.getBalanceSheet(testCase, function (err, report) {
       assert.ifError(err);
-      assert.ok(report['Total Assets'][0]);
       console.log(util.inspect(report, {depth: null}));
+      assert.ok(report['Total Assets'][0]);
       done()
     })
   })
 })
 
 describe('getCashFlow', function () {
+  this.timeout(3000)
   it('dispatches to a provider', function (done) {
     finScraper.getCashFlow(testCase, function (err, report) {
       assert.ifError(err);

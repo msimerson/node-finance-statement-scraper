@@ -10,12 +10,14 @@ Includes a built-in throttle that limits requests to providers, to reduce the li
 # Current Providers
 
 * Yahoo
+* Investigate: https://github.com/pilwon/node-yahoo-finance
+
 
 # Planned features
 
 * support for additional providers
     * [Edgar](https://www.sec.gov/edgar/searchedgar/webusers.htm)
-    * [Google](https://www.google.com/finance)
+    * [Google](https://www.google.com/finance), maybe with [google-finance-provider](https://github.com/pilwon/node-google-finance)
 * an abstraction layer, that reduces differences between providers
 
 # Example results

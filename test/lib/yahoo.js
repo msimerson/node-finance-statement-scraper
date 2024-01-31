@@ -9,6 +9,7 @@ var yahoo   = require('../../lib/yahoo');
 describe('yahoo', function() {
 
   describe('fetchIncomeStatement', function () {
+    this.timeout(3000)
     it('gets an Income Statement', function (done) {
       yahoo.fetchIncomeStatement({symbol: 'AAPL'}, function (err, html) {
         assert.ifError(err);
@@ -20,10 +21,10 @@ describe('yahoo', function() {
         //     console.error(err);
         //   }
         //   done();
-        // });
-      });
-    });
-  });
+        // })
+      })
+    })
+  })
 
   describe('parseIncomeStatement', function () {
     it('parses a Yahoo Income Statement from raw HTML', function (done) {
@@ -38,10 +39,10 @@ describe('yahoo', function() {
           console.log(util.inspect(parsed, {depth: null}));
           // .$('.yfnc_tabledata1')
           done();
-        });
-      });
-    });
-  });
+        })
+      })
+    })
+  })
 
   describe.skip('getIncomeStatement', function () {
     it('fetches and parses a Yahoo Income Statement', function (done) {
@@ -49,11 +50,12 @@ describe('yahoo', function() {
         assert.ifError(err);
         assert.ok(report['Total Revenue'][0]);
         done();
-      });
-    });
-  });
+      })
+    })
+  })
 
   describe('fetchBalanceSheet', function () {
+    this.timeout(3000)
     it('gets a Balance Sheet', function (done) {
       yahoo.fetchBalanceSheet({symbol: 'AAPL'}, function (err, html) {
         assert.ifError(err);
@@ -64,10 +66,10 @@ describe('yahoo', function() {
         //     console.error(err);
         //   }
         //   done();
-        // });
-      });
-    });
-  });
+        // })
+      })
+    })
+  })
 
   describe('parseBalanceSheet', function () {
     it('parses a Yahoo Balance Sheet from raw HTML', function (done) {
@@ -80,12 +82,13 @@ describe('yahoo', function() {
           assert.ok(report['Total Assets'][0]);
           console.log(util.inspect(report, {depth: null}));
           done();
-        });
-      });
-    });
-  });
+        })
+      })
+    })
+  })
 
   describe('fetchCashFlow', function () {
+    this.timeout(3000)
     it('gets a Cash Flow statement', function (done) {
       yahoo.fetchCashFlow({symbol: 'AAPL'}, function (err, html) {
         assert.ifError(err);
@@ -96,10 +99,10 @@ describe('yahoo', function() {
         //     console.error(err);
         //   }
         //   done();
-        // });
-      });
-    });
-  });
+        // })
+      })
+    })
+  })
 
   describe('parseCashFlow', function () {
     it('parses a Yahoo Cash Flow from raw HTML', function (done) {
@@ -112,8 +115,8 @@ describe('yahoo', function() {
           assert.ok(report['Depreciation'][0]);
           console.log(util.inspect(report, {depth: null}));
           done();
-        });
-      });
-    });
-  });
-});
+        })
+      })
+    })
+  })
+})

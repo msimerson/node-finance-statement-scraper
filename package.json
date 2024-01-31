@@ -1,10 +1,11 @@
 {
   "name": "finance-statement-scraper",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Scrape Financial Statements (Balance Sheet, Profit & Loss, Cash Flow)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npx mocha",
+    "versions": "npx dependency-version-checker check"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,14 @@
   "bugs": {
     "url": "https://github.com/msimerson/node-finance-statement-scraper/issues"
   },
-  "homepage": "https://github.com/msimerson/node-finance-statement-scraper#readme",
+  "homepage": "https://github.com/msimerson/node-finance-statement-scraper",
   "dependencies": {
+    "crawler": "^1.5.0",
     "htmlparser2": "^4.1.0",
-    "jsdom": "^11.12.0"
+    "jsdom": "^16.4.0"
   },
   "devDependencies": {
-    "eslint": "*",
-    "mocha": "*"
+    "eslint": "^8.56.0",
+    "mocha": "^10.2.0"
   }
 }
